@@ -8,21 +8,15 @@ def parse_args():
     parser.add_argument("--device", type=str, default="0")
 
     # models
-    parser.add_argument("--pretrained", type=bool, default=False)
     parser.add_argument("--input_size", type=int, default=28) 
-
-    # dataset
-    parser.add_argument("--data_dir", type=str, default="./datasets/")
-    parser.add_argument("--data_name", type=str, default='mnist')
 
     # training setting
     parser.add_argument("--lr", type=float, default=0.0002)
     parser.add_argument("--b1", type=float, default=0.5, help="adam: decay of first order momentum of gradient")
     parser.add_argument("--b2", type=float, default=0.999, help="adam: decay of first order momentum of gradient")
     parser.add_argument("--n_epoch", type=int, default=200)
-    parser.add_argument("--num_workers", type=int, default=2)
+    parser.add_argument("--num_workers", type=int, default=4)
     parser.add_argument("--batch_size", type=int, default=64)
-    parser.add_argument("--eval_batch_size", type=int, default=64)
 
     # misc
     parser.add_argument("--ckpt_root", type=str, default="./FT_model")
