@@ -39,7 +39,6 @@ class Solver():
         print("start training")
 
         for epoch in range(opt.n_epoch):
-            self.model.train()
             loop = tqdm(self.train_loader)
 
             for i , (imgs, _) in enumerate(loop):
