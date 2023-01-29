@@ -67,7 +67,7 @@ class Solver():
                 if epoch % 50 == 0:
                     save_image(generated_imgs[:25], f"data{epoch}.png", nrow=5, normalize=True)
                 
-            print(f"[Epoch {epoch}/{opt.n_epochs}] [D loss: {d_loss.item():.6f}] [G loss: {g_loss.item():.6f}]")
+            print(f"[Epoch {epoch}/{opt.n_epoch}] [D loss: {d_loss.item():.6f}] [G loss: {g_loss.item():.6f}]")
 
 def main():
     opt = get_option()
