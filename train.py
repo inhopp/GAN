@@ -50,7 +50,7 @@ class Solver():
 
                 # train Generator
                 self.optimizer_G.zero_grad()
-                z = Variable(torch.randn((imgs.size(0), 100)))
+                z = Variable(torch.randn((imgs.size(0), 100))).to(self.dev)
                 generated_imgs = self.generator(z)
                 g_loss = self.loss_fn(self.discriminator(generated_imgs), real)
                 g_loss.backward()
@@ -59,7 +59,7 @@ class Solver():
                 # train Discriminator
                 self.optimizer_D.zero_grad()
                 real_loss = self.loss_fn(self.discriminator(real_imgs), real)
-                fake_loss = self.loss_fn(self.discriminator(generated_imgs), fake)
+                fake_loss = self.loss_fn(self.discriminator(generated_imgs.detach()), fake)
                 d_loss = (real_loss + fake_loss) / 2
                 d_loss.backward()
                 self.optimizer_D.step()
