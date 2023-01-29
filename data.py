@@ -2,7 +2,7 @@ import torch
 import torchvision.transforms as transforms
 from torchvision import datasets
 
-def generate_loader(phase, opt):
+def generate_loader(opt):
     img_size = opt.input_size
 
     transform = transforms.Compose([

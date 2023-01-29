@@ -1,4 +1,3 @@
-import os
 import argparse
 
 def parse_args():
@@ -17,9 +16,6 @@ def parse_args():
     parser.add_argument("--n_epoch", type=int, default=200)
     parser.add_argument("--num_workers", type=int, default=4)
     parser.add_argument("--batch_size", type=int, default=64)
-
-    # misc
-    parser.add_argument("--ckpt_root", type=str, default="./FT_model")
 
     return parser.parse_args()
 
