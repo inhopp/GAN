@@ -8,7 +8,7 @@ def generate_loader(opt):
     transform = transforms.Compose([
         transforms.Resize(img_size),
         transforms.ToTensor(),
-        transforms.Normalize([0.5, 0.5]),
+        transforms.Normalize([0.5], [0.5]),
     ])
 
     dataset = datasets.MNIST(root="./datasets", train=True, download=True, transform=transform)
