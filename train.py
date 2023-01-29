@@ -64,10 +64,10 @@ class Solver():
                 d_loss.backward()
                 self.optimizer_D.step()
 
-                if epoch % 50 == 0:
+                if (epoch+1) % 50 == 0:
                     save_image(generated_imgs[:25], f"data{epoch}.png", nrow=5, normalize=True)
                 
-            print(f"[Epoch {epoch}/{opt.n_epoch}] [D loss: {d_loss.item():.6f}] [G loss: {g_loss.item():.6f}]")
+            print(f"[Epoch {epoch+1}/{opt.n_epoch}] [D loss: {d_loss.item():.6f}] [G loss: {g_loss.item():.6f}]")
 
 def main():
     opt = get_option()
