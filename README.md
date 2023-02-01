@@ -1,5 +1,6 @@
 # GAN
-GAN from scartch (pytorch)
+
+> [Paper Review](https://inhopp.github.io/paper/Paper14/)
 
 | Epoch 0 | Epoch 50 | Epoch 100 | Epoch 150 | Epoch 200 |
 |:-:|:-:|:-:|:-:|:-:|
@@ -10,13 +11,13 @@ GAN from scartch (pytorch)
 
 ``` python 
 ├── GAN
-        ├── datasets
-        │     └── mnist
-        ├── data.py
-        ├── option.py
-        ├── model.py
-        ├── train.py
-        └── README.md
+     ├── datasets
+     │     └── mnist
+     ├── data.py
+     ├── option.py
+     ├── model.py
+     ├── train.py
+     └── README.md
 ```
 
 - `data.py` : data load (download mnist)
