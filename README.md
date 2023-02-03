@@ -1,5 +1,7 @@
 # GAN
 
+Generative adversarial networks
+
 > [Paper Review](https://inhopp.github.io/paper/Paper14/)
 
 | Epoch 0 | Epoch 50 | Epoch 100 | Epoch 150 | Epoch 200 |
